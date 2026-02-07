@@ -4,4 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse(f"Method Used:{request.method}")
+    return render(
+
+        request, 'students/home.html',{"method": request.method}
+                  )
