@@ -4,9 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    
-    students=['Aakriti',"Khushi","Susan"]
+    is_class_active=True    
     return render(
 
-        request, 'students/home.html',{"students": students}
-                  )
+        request, 'students/home.html',
+        {"is_class_active":is_class_active}
+                  ) 
