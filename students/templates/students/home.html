@@ -6,6 +6,13 @@
     </head>
     <body>
         <h1> Welcome to the Students app</h1>
-        <p>Request method :{{method}}</p>
+        <h2>Students List</h2>
+        <ul>
+            {% for student in students %}
+                <li>{{student}}</li>
+            {%empty%}
+            <li>No students found</li>
+            {%endfor%}
+        </ul>
     </body>
 </html>

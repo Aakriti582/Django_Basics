@@ -4,7 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
+    
+    students=['Aakriti',"Khushi","Susan"]
     return render(
 
-        request, 'students/home.html',{"method": request.method}
+        request, 'students/home.html',{"students": students}
                   )
